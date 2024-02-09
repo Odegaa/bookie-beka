@@ -1,0 +1,85 @@
+@import 'src/assets/styles/base/mixin';
+
+.my_books {
+	padding: 60px 80px;
+	display: flex;
+	flex-direction: column;
+	row-gap: 30px;
+
+	@media (max-width: 820px) {
+		padding: 30px;
+	}
+	@media (max-width: 600px) {
+		padding: 20px;
+	}
+
+	.btns {
+		display: flex;
+		align-items: flex-start;
+		gap: 10px;
+	}
+
+	.wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 20px;
+	}
+	.listen {
+		display: flex;
+		flex-direction: column;
+		row-gap: 16px;
+
+		.audioitem {
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+			gap: 40px;
+
+			img {
+				width: 100px;
+				border-radius: 16px;
+			}
+			.text {
+				display: flex;
+				flex-direction: column;
+				row-gap: 12px;
+				flex: 1;
+				h4 {
+					@include adaptiv-font(16, 12, 18);
+					font-weight: 500;
+					line-height: 150%;
+				}
+				p {
+					font-size: 14px;
+					font-weight: 400;
+					line-height: 130%;
+					color: #585858;
+				}
+			}
+			.player {
+				display: flex;
+				align-items: center;
+				gap: 30px;
+
+				img {
+					width: 30px;
+					height: 30px;
+					cursor: pointer;
+				}
+				.timeline {
+					display: flex;
+					flex-direction: column;
+					row-gap: 10px;
+					.time {
+						display: flex;
+						align-items: center;
+						color: var(--brand-color-1);
+						span {
+							color: var(--typography-secondary);
+						}
+					}
+				}
+			}
+		}
+	}
+}

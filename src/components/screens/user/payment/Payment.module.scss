@@ -1,0 +1,169 @@
+@import 'src/assets/styles/base/mixin';
+
+.payment {
+	display: flex;
+	flex-direction: column;
+	padding: 30px 80px 60px;
+	row-gap: 30px;
+
+	h1 {
+		@include adaptiv-font(36, 22, 36);
+		font-weight: 600;
+		line-height: 100%;
+		opacity: 0.75;
+	}
+
+	.wrapper {
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+
+		.books {
+			display: flex;
+			flex-direction: column;
+			row-gap: 24px;
+
+			.book {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				gap: 40px;
+				width: 630px;
+				word-break: break-all;
+
+				img {
+					width: 100px;
+					border-radius: 16px;
+				}
+
+				.text {
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+					padding: 18px;
+					width: 100%;
+
+					.name {
+						display: flex;
+						flex-direction: column;
+						row-gap: 16px;
+
+						h4 {
+							@include adaptiv-font(16, 12, 18);
+							font-weight: 500;
+							line-height: 150%;
+							padding-right: 20px
+						}
+
+						p {
+							@include adaptiv-font(12, 8, 14);
+							font-weight: 400;
+							line-height: 130%;
+							color: #585858;
+						}
+					}
+
+					h2 {
+						@include adaptiv-font(20, 16, 22);
+						font-weight: 600;
+						line-height: 130%;
+						color: rgba(32, 32, 32, 0.75);
+						display: flex;
+						align-items: center;
+						white-space: nowrap;
+						gap: 30px;
+
+						img {
+							cursor: pointer;
+							width: 22px;
+						}
+					}
+				}
+			}
+		}
+
+		.box {
+			width: 420px;
+			display: flex;
+			flex-direction: column;
+			padding: 24px;
+			row-gap: 24px;
+			border: 1px solid var(--brand-color-2);
+			border-radius: 16px;
+			background: var(--brand-color-4);
+
+			.items {
+				display: flex;
+				flex-direction: column;
+				row-gap: 16px;
+
+				.item {
+					display: flex;
+					align-items: center;
+					width: 100%;
+					justify-content: space-between;
+					font-size: 14px;
+					font-weight: 500;
+					line-height: 130%;
+				}
+			}
+
+			.total {
+				border-top: 1px solid var(--brand-color-3);
+				padding-top: 10px;
+				display: flex;
+				align-items: center;
+				width: 100%;
+				justify-content: space-between;
+				@include adaptiv-font(20, 16, 22);
+				font-weight: 400;
+				line-height: 130%;
+			}
+
+			.btns {
+				display: flex;
+				align-items: center;
+				justify-content: flex-start;
+				gap: 12px;
+
+				.active {
+					border: 2px solid var(--brand-color-1);
+				}
+
+				button {
+					display: flex;
+					width: 77px;
+					height: 35px;
+					padding: 8.5px 16px;
+					justify-content: center;
+					align-items: center;
+					border-radius: 100px;
+					border: 1px solid var(--brand-color-3);
+					background: var(--brand-color-4);
+
+					&:disabled {
+						cursor: not-allowed;
+					}
+
+					&:hover {
+						border: 2px solid var(--brand-color-1);
+					}
+				}
+			}
+		}
+
+		.submit {
+			button {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				@include adaptiv-font(20, 16, 22);
+				font-weight: 500;
+				line-height: 130%;
+				gap: 8px;
+				width: 100% !important;
+				padding: 16px !important;
+			}
+		}
+	}
+}
